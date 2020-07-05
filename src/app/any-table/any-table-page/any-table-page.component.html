@@ -1,0 +1,17 @@
+<h1>Using any</h1>
+<p>
+  This example features multiple instances of a single component, thus promoting
+  code reuse. The main problem here is that consistency between rows and columns
+  is not enforced, since the shared <code>AnyTableComponent</code> accepts
+  inputs of type <code>any</code> to achieve generalisation.
+</p>
+
+<app-any-table [columns]="carsColumns" [rows]="carsRows"></app-any-table>
+<app-any-table [columns]="dogsColumns" [rows]="dogsRows"></app-any-table>
+<app-any-table [columns]="peopleColumns" [rows]="peopleRows"></app-any-table>
+
+<small>
+  Don't worry about the titles being represented by keys instead of names. You
+  can use packages like <em>ngx-translate</em> to associate a string to each key
+  and achieve internationalization at the same time.
+</small>

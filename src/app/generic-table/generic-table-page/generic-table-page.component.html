@@ -1,0 +1,24 @@
+<h1>Using Typescript's Generics</h1>
+<p>
+  This is my favourite way to handle tables. There are no visual changes with
+  respect to the previous example, using a component whose inputs have an
+  <code>any</code> type. And on top of that, the
+  <code>GenericTableComponent</code> is more complex than the
+  <code>AnyTableComponent</code>. So why should anyone prefer this solution?
+  Because the consistency between rows and columns is enforced at the type
+  level: make a mistake in the data structure you are providing to the
+  <code>GenericTableComponent</code> component - like missing or additional
+  fields - and your code won't even compile.
+</p>
+<app-generic-table
+  [columns]="carsColumns"
+  [rows]="carsRows"
+></app-generic-table>
+<app-generic-table
+  [columns]="dogsColumns"
+  [rows]="dogsRows"
+></app-generic-table>
+<app-generic-table
+  [columns]="peopleColumns"
+  [rows]="peopleRows"
+></app-generic-table>
